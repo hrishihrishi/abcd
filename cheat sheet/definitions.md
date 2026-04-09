@@ -39,15 +39,15 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 
 ## Read (Query)
 
-* `db.users.find()`
-* `db.users.findOne()`
+* `db.users.find({name: "A", age: 20})`
+* `db.users.findOne({name: "A", age: 20})`
 * `db.users.find({ age: { $gt: 20 } })`
 
 ### Operators
 
-* `$gt, $lt, $gte, $lte` → compare
-* `$in, $nin` → list check
-* `$and, $or`
+* `$gt, $lt, $gte, $lte` → compare  eg: db.users.find({ age: { $gt: 20 } })
+* `$in, $nin` → list check  eg: db.users.find({ age: { $in: [20, 30] } })
+* `$and, $or`  eg: db.users.find({ $and: [{ age: { $gt: 20 } }, { age: { $lt: 30 } }] })
 
 **Recall:** *find = filter JSON*
 
@@ -56,15 +56,15 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 ## Update
 
 * `db.users.updateOne({name:"A"}, {$set:{age:25}})`
-* `db.users.updateMany()`
-* `db.users.replaceOne()`
+* `db.users.updateMany({name:"A"}, {$set:{age:25}})`
+* `db.users.replaceOne({name:"A"}, {name:"B", age:25})`
 
 ### Update Operators
 
-* `$set` → change
-* `$inc` → increment
-* `$push` → add to array
-* `$pull` → remove from array
+* `$set` → change   eg: db.users.updateOne({name:"A"}, {$set:{age:25}})
+* `$inc` → increment  eg: db.users.updateOne({name:"A"}, {$inc:{age:25}})
+* `$push` → add to array  eg: db.users.updateOne({name:"A"}, {$push:{age:25}})
+* `$pull` → remove from array  eg: db.users.updateOne({name:"A"}, {$pull:{age:25}})
 
 **Recall:** *update = modify fields*
 
@@ -73,7 +73,7 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 ## Delete
 
 * `db.users.deleteOne({ name: "A" })`
-* `db.users.deleteMany({})`
+* `db.users.deleteMany({name: "A"})`
 
 **Recall:** *delete = remove docs*
 
@@ -91,11 +91,11 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 
 ### Stages
 
-* `$match` → filter
-* `$group` → group
-* `$sort`
-* `$project`
-* `$limit`
+* `$match` → filter   eg: db.users.aggregate([{ $match: { age: { $gt: 20 } } }])
+* `$group` → group  eg: db.users.aggregate([{ $group: { _id: "$name", count: { $sum: 1 } } }])
+* `$sort`  eg: db.users.aggregate([{ $sort: { age: 1 } }])
+* `$project`  eg: db.users.aggregate([{ $project: { name: 1, age: 1 } }])
+* `$limit`  eg: db.users.aggregate([{ $limit: 10 }])
 
 **Recall:** *aggregate = pipeline*
 
@@ -113,8 +113,10 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 
 ## Connection
 
-* `mongoose.connect(uri)`
+* `mongoose.connect(uri)` 
+code: mongoose.connect("mongodb://localhost:27017/mydb")
 * `mongoose.disconnect()`
+code: mongoose.disconnect()
 
 **Recall:** *connect = start DB*
 

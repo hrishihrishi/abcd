@@ -1,4 +1,8 @@
-THIS IS BRANCH "MAIN"
+THIS CODE WILL GO INTO BRANCH 'BRAIN'
+
+
+
+
 
 ## HTML DOM Reference
 https://www.w3schools.com/Js/js_htmldom_element_reference.asp
@@ -47,8 +51,11 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 ### Operators
 
 * `$gt, $lt, $gte, $lte` → compare  eg: db.users.find({ age: { $gt: 20 } })
-* `$in, $nin` → list check  eg: db.users.find({ age: { $in: [20, 30] } })
+* `$in (any), $nin (not any)` → 
+  eg: db.users.find({ age: { $in: [20, 30] } })
 * `$and, $or`  eg: db.users.find({ $and: [{ age: { $gt: 20 } }, { age: { $lt: 30 } }] })
+* `$exists` → check if field exists eg: db.users.find({ age: { $exists: true } })
+* `$unset` → remove field eg: db.users.updateOne({name:"A"}, {$unset:{age:""}})
 
 **Recall:** *find = filter JSON*
 

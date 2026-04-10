@@ -282,9 +282,19 @@ const router = createBrowserRouter([
 
 
 
-//------MONGO DB------
+//------REACT DYNAMIC ROUTING------
+
+{path: "/users/:id", element: <User />}
+
+// to link to a dynamic route
+<Link to={`/user/${user.id}`}>View Profile</Link>
+
+// in user component
+const {id} = useParams()
+console.log(id)
 
 
 
 
-// Recall that 'drop' is the verb for removing entire structures in MongoDB.
+
+

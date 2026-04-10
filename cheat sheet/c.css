@@ -2,21 +2,21 @@
 
 
 
-/* ______________________________ */
+______________________________________ 
 /*    TRANSITIONS       */
 /* selector { transition: property  duration  delay  timing-function; } */
 .box { transition: width 2s 1s ease-in-out; }
 .box:hover { width: 200px; }
 
 
-/* ______________________________ */
+______________________________________
 /*    TRANSFORMS       */
 /* selector { transform: property(value); } */
 .box { transform: scale(1.2); }
 .box:hover { transform: scale(1.2); }
 
 
-/* ______________________________ */
+______________________________________
 /*    TRANSLATES       */
 /* selector { translate: x y; } */
 .box { translate: 10px 20px; }

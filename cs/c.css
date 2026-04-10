@@ -30,6 +30,19 @@ ______________________________________
 .child_box { position: absolute; }
 
 
+
+
+
+### DISPLAYS
+
+1. block : takes full width
+2. inline : takes only required width
+3. inline-block : takes only required width but can have top and bottom margin
+4. flex : flexible layout
+5. grid : grid layout
+6. none : element is not displayed, space is also removed
+
+
 ______________________________________
 /*    GRID    */
 

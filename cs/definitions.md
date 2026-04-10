@@ -6,54 +6,6 @@ https://www.w3schools.com/Js/js_htmldom_element_reference.asp
 ## HTML DOM Events
 https://www.w3schools.com/jsref/dom_obj_event.asp
 
-
----
-# CSS
-
-### POSITIONS:
-
-1. static: default position
-2. relative: relative to its normal position
-3. absolute: relative to its nearest positioned ancestor
-4. fixed: relative to the viewport
-5. sticky: relative to its nearest positioned ancestor, but sticky when scrolled
-
-### DISPLAYS
-
-1. block : takes full width
-2. inline : takes only required width
-3. inline-block : takes only required width but can have top and bottom margin
-4. flex : flexible layout
-5. grid : grid layout
-6. none : element is not displayed, space is also removed
-
-
-### TRANSITIONS, TRANSFORMS, TRANSLATES
-
-1. transition: smooth change from one state to another
-eg: .box {transition: property duration delay timing-function;}
-params: 
-- property: all, 
-- duration: 2s
-- delay: 1s
-- timing-function: ease-in-out, ease-in, ease-out, ease, linear
-
-2. transform: change the shape or size of an element
-eg: .box {transform: scale(1.2);}
-params:
-- scale: 
-- rotate: 
-- skew: 
-- translate: 
-
-3. translate: move element from one position to another
-eg: .box {translate: 10px 20px;}
-params:
-- x: 
-- y: 
-- z: 
-
-
 ---
 
 # 1) MongoDB Commands (Shell / Native)

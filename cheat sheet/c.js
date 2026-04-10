@@ -227,6 +227,18 @@ const router = createBrowserRouter([
 
 
 
+
+______________________________________
+// ------REACT LAZY LOADING--------
+import { lazy, Suspense } from "react";
+// *** import the component this way , that's all! ***
+const LazyComponent = lazy(() => import("./Greeting"));
+{ path: "/greeting", element: <Suspense fallback={<div>Loading...</div>}><LazyComponent /></Suspense>}
+
+
+
+
+
 ______________________________________
 //------REACT DYNAMIC ROUTING------
 
@@ -238,7 +250,6 @@ ______________________________________
 // in user component
 const {id} = useParams()
 console.log(id)
-
 
 
 

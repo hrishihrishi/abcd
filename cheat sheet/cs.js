@@ -109,17 +109,6 @@ function outer(){
 
 
 
-// ------ IIFE ------
-
-(function(){ 
-    console.log("Hello World")
-})()
-// output: Hello World
-
-
-
-
-
 
 
 
@@ -231,6 +220,17 @@ myPromise
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 // ------- REACT ROUTER SETUP---------
 
 // npm install react-router-dom
@@ -314,26 +314,37 @@ useEffect(() => {
 }, [])
 
 
+// _______________________________
 // useContext
 const ThemeContext = createContext(null)
 const {theme, setTheme} = useContext(ThemeContext)
 
+
+// _______________________________
 // useReducer
 const [state, dispatch] = useReducer(reducer, initialState)
 
+
+// _______________________________
 // useRef
 const ref = useRef(null)
 ref.current = 10;
 console.log(ref.current) // 10
 
+
+// _______________________________
 // useMemo
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
 
+
+// _______________________________
 // useCallback
 const memoizedCallback = useCallback(() => {
     doSomething(a, b)
 }, [a, b])
 
+
+// _______________________________
 // custom hook
 function useMyHook() {
     const [value, setValue] = useState(initialValue)

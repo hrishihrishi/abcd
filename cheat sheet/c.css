@@ -23,24 +23,27 @@ ______________________________________
 .box:hover { translate: 10px 20px; }
 
 
-/* ______________________________ */
+______________________________________
 /* POSITIONS  */
 /* selector { position: value; } */
 .parent_box { position: relative; }
 .child_box { position: absolute; }
 
 
-/* ______________________________ */
+______________________________________
 /*    GRID    */
 
 /* grid-template-columns: repeat(3, 1fr);  */
 .grid_container { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 10px; }
 
+
 /* grid-row: 1 / 3;  */
 .grid_container { display: grid; grid-row: 1 / 3; }
 
+
 /* grid-area: 1 / 1 / 3 / 3;  */
 .grid_container { display: grid; grid-area: 1 / 1 / 3 / 3; }
+
 
 /* grid-template-areas: "c1 c2 c2" "c1 c3 c3" "c1 c4 c4" "c1 c5 c5";  */
 .c1{ grid-area: c1;}
@@ -50,8 +53,10 @@ ______________________________________
 .c5{ grid-area: c5;}
 .grid_container { display: grid; grid-template-areas: "c1 c2 c2" "c1 c3 c3" "c1 c4 c4" "c1 c5 c5"; }
 
+
 /* grid-area: header;  */
 .grid_container { display: grid; grid-area: header; } /* grid-area: nav /header / main / footer / */
+
 
 /* grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); grid-gap: 10px; grid-template-areas: "header header header" "nav nav nav" "main main main" "footer footer footer";  */
 .grid_container { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); grid-gap: 10px; 

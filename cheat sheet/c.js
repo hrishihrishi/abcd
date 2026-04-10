@@ -25,16 +25,8 @@ let cat = Object.create(animal)
 cat instanceof animal // true
 
 
-
-
-
-
-
-
-
-
+______________________________________
 // ------CLASS INHERITANCE------
-
 class Animal {
     constructor(name){
         this.name = name
@@ -62,15 +54,8 @@ let dog = new Dog("Buddy", 4)
 
 
 
-
-
-
-
-
-
-
+______________________________________
 // ------ CLOSURES ------
-
 function outer(){
     let count = 0;
 
@@ -104,18 +89,8 @@ function outer(){
 
 
 
-
-
-
-
-
-
-
-
-
-
+______________________________________
 // ------ CALL, APPLY, BIND ------
-
 // let Internshala = {
 //     rating : 4.5
 // }
@@ -142,15 +117,8 @@ console.log(
 
 
 
-
-
-
-
-
-
-
-// ------ HIGHER ORDER FUNCTIONS ------
-
+______________________________________
+// ------ HIGHER ORDER FUNCTIONS 
 function callback_function(name){
     console.log("callback function says : hello", name)
 }
@@ -163,17 +131,8 @@ higher_order_function(callback_function) // output: callback function says hello
 
 
 
-
-
-
-
-
-
-
-
-
-
-// ------ FILTER, REDUCE, MAP, FOR EACH ------
+______________________________________
+// FILTER, REDUCE, MAP, FOR EACH 
 let arr = [1, 2, 3, 'a', 5, 6, 7, 8, 9, 10]
 
 // returns new array
@@ -193,13 +152,7 @@ arr.forEach((x, i) => console.log(x, i)) // 1 0, 2 1, 3 2, 'a' 3, 5 4, 6 5, 7 6,
 
 
 
-
-
-
-
-
-
-
+______________________________________
 // ------ PROMISES ------
 
 const myPromise = new Promise((resolve, reject) => {
@@ -230,7 +183,7 @@ myPromise
 
 
 
-
+______________________________________
 // ------- REACT ROUTER SETUP---------
 
 // npm install react-router-dom
@@ -245,7 +198,6 @@ myPromise
 // import { TodoList } from './TodoList'
 // import { Timer } from './Timer'
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -255,29 +207,15 @@ const router = createBrowserRouter([
       { path: "a", element: <Greeting message="Krsna" /> },
       { path: "b", element: <TodoList /> },
       { path: "c", element: <Timer /> }
-    ]
-  }
-])
-
+    ]}])
 
   ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeContextProvider>
       <RouterProvider router={router} />
-    </ThemeContextProvider>
-
-  );
+    </ThemeContextProvider>);
 
 
-
-
-
-
-
-
-
-
-
-
+______________________________________
 //------REACT DYNAMIC ROUTING------
 
 {path: "/users/:id", element: <User />}
@@ -291,20 +229,14 @@ console.log(id)
 
 
 
-
-
-
-
-
-
-
+______________________________________
 // ------REACT HOOKS--------
 
 // useState
 const [count, setCount] = useState(0)
 
 
-// _______________________________
+----------------------------------
 // useEffect
 useEffect(() => {
     let timer = setInterval(() => {
@@ -314,37 +246,37 @@ useEffect(() => {
 }, [])
 
 
-// _______________________________
+----------------------------------
 // useContext
 const ThemeContext = createContext(null)
 const {theme, setTheme} = useContext(ThemeContext)
 
 
-// _______________________________
+----------------------------------
 // useReducer
 const [state, dispatch] = useReducer(reducer, initialState)
 
 
-// _______________________________
+----------------------------------
 // useRef
 const ref = useRef(null)
 ref.current = 10;
 console.log(ref.current) // 10
 
 
-// _______________________________
+----------------------------------
 // useMemo
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
 
 
-// _______________________________
+----------------------------------
 // useCallback
 const memoizedCallback = useCallback(() => {
     doSomething(a, b)
 }, [a, b])
 
 
-// _______________________________
+----------------------------------
 // custom hook
 function useMyHook() {
     const [value, setValue] = useState(initialValue)

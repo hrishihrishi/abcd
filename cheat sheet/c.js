@@ -25,6 +25,8 @@ let cat = Object.create(animal)
 cat instanceof animal // true
 
 
+
+
 ______________________________________
 // ------CLASS INHERITANCE------
 class Animal {
@@ -51,6 +53,7 @@ let dog = new Dog("Buddy", 4)
 // // checking if an object is an instance of another object
 // dog instanceof Dog // true
 // console.log( dog instanceof Animal) // true
+
 
 
 
@@ -89,6 +92,7 @@ function outer(){
 
 
 
+
 ______________________________________
 // ------ CALL, APPLY, BIND ------
 // let Internshala = {
@@ -117,6 +121,8 @@ console.log(
 
 
 
+
+
 ______________________________________
 // ------ HIGHER ORDER FUNCTIONS 
 function callback_function(name){
@@ -128,6 +134,8 @@ function higher_order_function(x){
 }
 
 higher_order_function(callback_function) // output: callback function says hello Hrishikesh
+
+
 
 
 
@@ -149,6 +157,8 @@ console.log(sum) // 55
 
 // returns nothing
 arr.forEach((x, i) => console.log(x, i)) // 1 0, 2 1, 3 2, 'a' 3, 5 4, 6 5, 7 6, 8 7, 9 8, 10 9
+
+
 
 
 
@@ -215,6 +225,8 @@ const router = createBrowserRouter([
     </ThemeContextProvider>);
 
 
+
+
 ______________________________________
 //------REACT DYNAMIC ROUTING------
 
@@ -226,6 +238,8 @@ ______________________________________
 // in user component
 const {id} = useParams()
 console.log(id)
+
+
 
 
 

@@ -30,15 +30,15 @@ https://www.w3schools.com/jsref/dom_obj_event.asp
 
 ### TRANSITIONS, TRANSFORMS, TRANSLATES
 
-1. transition: means smooth change from one state to another
-eg: .box {transition: all 0.5s ease-in-out;}
+1. transition: smooth change from one state to another
+eg: .box {transition: property duration delay timing-function;}
 params: 
-- property: 
-- duration: 
-- delay: 
-- timing-function: 
+- property: all, 
+- duration: 2s
+- delay: 1s
+- timing-function: ease-in-out, ease-in, ease-out, ease, linear
 
-2. transform: means change the shape or size of an element
+2. transform: change the shape or size of an element
 eg: .box {transform: scale(1.2);}
 params:
 - scale: 
@@ -46,7 +46,7 @@ params:
 - skew: 
 - translate: 
 
-3. translate: means move an element from one position to another
+3. translate: move element from one position to another
 eg: .box {translate: 10px 20px;}
 params:
 - x: 

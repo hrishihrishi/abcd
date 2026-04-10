@@ -278,10 +278,6 @@ const router = createBrowserRouter([
 
 
 
-
-
-
-
 //------REACT DYNAMIC ROUTING------
 
 {path: "/users/:id", element: <User />}
@@ -295,6 +291,54 @@ console.log(id)
 
 
 
+
+
+
+
+
+
+
+// ------REACT HOOKS--------
+
+// useState
+const [count, setCount] = useState(0)
+
+
+// _______________________________
+// useEffect
+useEffect(() => {
+    let timer = setInterval(() => {
+        console.log("timer")
+    }, 1000)
+    return () => clearInterval(timer)
+}, [])
+
+
+// useContext
+const ThemeContext = createContext(null)
+const {theme, setTheme} = useContext(ThemeContext)
+
+// useReducer
+const [state, dispatch] = useReducer(reducer, initialState)
+
+// useRef
+const ref = useRef(null)
+ref.current = 10;
+console.log(ref.current) // 10
+
+// useMemo
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b])
+
+// useCallback
+const memoizedCallback = useCallback(() => {
+    doSomething(a, b)
+}, [a, b])
+
+// custom hook
+function useMyHook() {
+    const [value, setValue] = useState(initialValue)
+    return [value, setValue]
+}
 
 
 
